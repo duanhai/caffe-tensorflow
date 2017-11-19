@@ -259,4 +259,3 @@ class Network(object):
         for d in input.get_shape()[1:].as_list():
                 dim *= d
         return tf.reshape(input,[-1,dim],name = name)
-            
