@@ -24,8 +24,7 @@ def get_strided_kernel_output_shape(node, round_func):
 
 
 def shape_not_implemented(node):
-    raise NotImplementedError
-    
+    raise NotImplementedError  
 
 
 def shape_identity(node):

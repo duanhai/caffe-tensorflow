@@ -70,7 +70,6 @@ class NodeKind(LayerType):
             val = LAYER_DESCRIPTORS[node.kind](node)
             return val
         except NotImplementedError:
-            print('yo')
             raise KaffeError('Output shape computation not implemented for type: %s' % node.kind)
 
 
@@ -93,7 +92,6 @@ class NodeDispatch(object):
     def get_handler(self, node_kind, prefix):
         name = self.get_handler_name(node_kind)
         name = '_'.join((prefix, name))
-        print name
         try:
             return getattr(self, name)
         except AttributeError:
